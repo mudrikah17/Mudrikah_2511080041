@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk Kami</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff6ef;
+      text-align: center;
+      color: #333;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #6b3e26;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #b5563b;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #b5563b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Warna unik per produk */
+    .pudding { background-color: #ffe3d8; }
+    .rumput { background-color: #d4f7d0; }
+    .hijab { background-color: #f5e3ff; }
+  </style>
+</head>
+<body>
+  <h2>Produk Unggulan Kami</h2>
+  <div class="container">
+    <div class="card pudding">
+      <h3>Pudding Homemade</h3>
+      <p>Rasakan manis lembut pudding homemade kami, dibuat dari bahan berkualitas dan tanpa pengawet.</p>
+      <a href="#">Lihat Selengkapnya →</a>
+    </div>
+
+    <div class="card rumput">
+      <h3>Rumput Sintetis</h3>
+      <p>Tampil hijau tanpa repot! Rumput sintetis cocok untuk taman, lapangan, atau dekorasi rumah Anda.</p>
+      <a href="#">Lihat Selengkapnya →</a>
+    </div>
+
+    <div class="card hijab">
+      <h3>Hijab Trendy</h3>
+      <p>Hijab stylish dan nyaman dipakai sehari-hari, tersedia berbagai warna dan bahan pilihan.</p>
+      <a href="#">Lihat Selengkapnya →</a>
+    </div>
+  </div>
+</body>
+</html>

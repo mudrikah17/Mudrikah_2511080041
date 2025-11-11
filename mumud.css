@@ -1,0 +1,597 @@
+/*Color Palette*/
+:root {
+  --bg: #f8f3ef;
+  --text: #5b4636;
+  --accent: #c8a98e;
+  --light: #fffaf5;
+  --bg-dark: #b08968;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
+}
+
+/* 🌷 Header */
+header {
+  background-color: var(--bg-dark);
+  box-shadow: 0px 10px rgba(59, 45, 18, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* 🌸Home Section beautiful */
+#home {
+  display: flex;
+  justify-content: center;
+  /align-items: center;
+  flex-direction: column;
+  text-align: center; /* Rata tengah teks */
+  height: 50vh; /* Biar memenuhi tinggi layar */
+  background-color: var(--bg); /* Warna latar  */
+  color: var(--text);
+}
+
+.drama-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); /*garis di tengah */
+  width: 80px; /* panjang garis*/
+  height: 3px;
+  background-color: var(--accent); /* warna garis */
+  border-radius: 2px;
+}
+
+/* 🌸 Home Section Box Model */
+
+.home .content {
+  background-color: var(--light);
+  border: 2px solid var(--accent); /* garis bingkai*/
+  border-radius: 20px; /* sudut melengkung lembut */
+  padding: 1px 60px; /* ruang dalam kotak */
+  margin: 2cm auto; /* jarak luar biar kotak gak nempel tepi */
+  max-width: 900px; /* batasi lebar agar rapi di tengah */
+  box-shadow: 0 8px 20px rgba(91, 70, 54, 0.1); /* bayangan lembut coklat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Container utama */
+.about-container {
+  display: flex;
+  flex-direction: column; /* biar vertikal */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 8px 20px rgba(91, 70, 54, 0.1);
+}
+
+/* Deskripsi panjang di bawah */
+.about-desc {
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  text-align: justify;
+  background-color: var(--accent);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(91, 70, 54, 0.05);
+}
+
+/* Font Hey beautiful: Caveat Brush */
+.caveat-brush-regular {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.8rem;
+  color: var(--accent-dark, #a38569);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(200, 169, 142, 0.4);
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home blockquote {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* 🌷 ABOUT ME  */
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px; /* beri jarak bawah */
+}
+
+.about-img img {
+  width: px; /* diperbesar */
+  height: 500px; /* sama supaya bulat sempurna */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+  box-shadow: 0 6px 20px rgba(91, 70, 54, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek waktu di-hover */
+.about-img img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(200, 169, 142, 0.5);
+}
+
+/* Teks sassy  */
+.about-text {
+  flex: 5;
+  color: var(--text);
+  text-align: left;
+}
+
+.about-text h2 {
+  color: var(--accent-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-quote {
+  font-family: "Caveat Brush", cursive;
+  font-size: 1.6rem;
+  color: var(--accent-dark);
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(200, 169, 142, 0.3);
+}
+
+/* 🌸 Service Section */
+.service-section {
+  background-color: #fff6f0;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.service-section .section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #5a2a1e;
+  margin-bottom: 50px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.service-cards .card {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.service-cards .card h3 {
+  color: #5a2a1e;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-cards .card p {
+  font-size: 0.9rem;
+  color: #7a6c63;
+  margin-bottom: 20px;
+}
+
+.service-cards .card .learn-more {
+  color: #a65143;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.service-cards .card.active {
+  background-color: #d97b6c;
+  color: white;
+  transform: translateY(-10px);
+}
+
+.service-cards .card.active .learn-more {
+  color: #fff;
+}
+
+/*🌸Expertise Section */
+.expertise {
+  display: flex;
+  align-items: center; /* sejajarkan teks & foto */
+  justify-content: space-between;
+  gap: 60px; /* jarak antara teks dan foto */
+  padding: 60px 100px;
+  flex-wrap: nowrap; /* biar tidak pindah ke bawah */
+}
+
+.expertise-text {
+  flex: 1.2;
+}
+
+.expertise-text h2 {
+  font-family: "Playfair Display", serif;
+  color: #a65143;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.expertise-text p {
+  color: #5a2a1e;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Progress bar */
+.progress {
+  margin-bottom: 15px;
+}
+
+.progress label {
+  display: block;
+  font-weight: 600;
+  color: #5a2a1e;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: #f1dcd3;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.bar .fill {
+  background: #a65143;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  background-color: #a65143;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a2a1e;
+  transform: scale(1.05);
+}
+
+.expertise-img {
+  flex: 0.8;
+  text-align: right;
+}
+
+.expertise-img img {
+  width: 260px;
+  border-radius: 30px;
+  background-color: #f5c7bb;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.expertise-img img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .expertise {
+    flex-wrap: nowrap; /* foto tetap dikanan*/
+    padding: 40px 40px;
+    gap: 30px;
+  }
+
+  .expertise-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .expertise-text p {
+    font-size: 0.95rem;
+  }
+
+  .expertise-img img {
+    width: 200px; /* ukuran untuk dilayar hp*/
+  }
+}
+
+/* 🌸 Bagian Blog */
+.blog .blog-box h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent-dark, #a38569);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Kotak */
+.blog .blog-box {
+  background-color: var(--light);
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(91, 70, 54, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek */
+.blog .blog-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(91, 70, 54, 0.25);
+}
+
+.blog .blog-box p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.shop ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.shop li {
+  margin: 10px 0;
+}
+
+/* 🌸 Bagian Shop */
+.shop {
+  text-align: center;
+  padding: 60px 0;
+  background-color: var(--bg);
+}
+
+/* Kotak utama shop */
+.shop .shop-box {
+  background-color: var(--light);
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(91, 70, 54, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover */
+.shop .shop-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(91, 70, 54, 0.25);
+}
+
+/* Judul */
+.shop .shop-box h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent-dark, #a38569);
+  margin-bottom: 1rem;
+}
+
+/* Daftar produk */
+.shop .shop-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.shop .shop-box li {
+  background-color: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 15px;
+  padding: 0.8rem 1.5rem;
+  margin: 0.6rem auto;
+  width: 60%;
+  font-size: 1rem;
+  color: var(--text);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.08);
+}
+
+/* Efek */
+.shop .shop-box li:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(200, 169, 142, 0.3);
+}
+
+/* Teks sassy */
+.about-text {
+  text-align: center;
+}
+/* 🌸Responsif untuk HP */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    width: 180px;
+    height: 180px;
+  }
+  .about-quote {
+    font-size: 1.4rem;
+  }
+}
+
+/* 🌸Contact */
+.contact {
+  text-align: center;
+  padding: 60px 0;
+  background-color: var(--bg);
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: var(--text); /* Saat dihover warnanya berubah */
+  text-decoration: underline;
+}
+
+/* Tombol WhatsApp */
+.contact .btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  margin-top: 1.2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact .btn:hover {
+  background: var(--text);
+  transform: scale(1.05);
+}
+
+/* Teks kecil di bawah */
+.contact .footer-text {
+  margin-top: 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.footer-text {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: var(--light);
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* 🌸 Drama Text Animation */
+.drama-text {
+  font-size: 2.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2.5s ease forwards;
+}
+
+/* ✨ Keyframes for animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drama-text::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: var(--accent);
+  margin: 0.5 rem auto;
+  border-radius: 10px;
+  animation: lineGrow 2s ease-in-out 2.5s forwards;
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60%;
+    opacity: 1;
+  }
+}
